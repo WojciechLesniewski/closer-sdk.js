@@ -2,12 +2,13 @@ name: Test
 
 on: [push]
 jobs:
-  build:
+  Test:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
+    - uses: mooyoul/tslint-actions@v1.1.1
     - name: Test 
       run: |
         npm run test
